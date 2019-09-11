@@ -1,0 +1,98 @@
+<%#
+ * File name: tfSurvey.ejs
+ * Authors:
+ * Shawn McLaughlin <shawnmcdev@gmail.com>
+ * Joshua Korovesi <joshua.j.korovesi@gmail.com>
+ * Site: https://joshawn-opine.herokuapp.com/
+ * Description: True/False survey page template.
+%>
+<% include ../partials/header.ejs %>
+
+<div class="container main-content">
+    <div class="row text-center">
+        <h2><%= data.survey.title %></h2>
+        <h4>By: <%= data.survey.authorName %></h4>
+    </div>
+
+  <form method="post">
+    <div class="form-group center-block text-center">
+        <div>
+            <label class="control-label">Question 1: <%= data.survey.questions[0].question %></label>
+        </div>
+      <div>
+        <div class="radio">
+            <label><input type="radio" name="q1" value="true">True</label>
+        </div>
+        <div class="radio">
+            <label><input type="radio" name="q1" value="false">False</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group center-block text-center">
+        <div>
+            <label class="control-label">Question 2: <%= data.survey.questions[1].question %></label>
+        </div>
+      <div>
+        <div class="radio">
+            <label><input type="radio" name="q2" value="true">True</label>
+        </div>
+        <div class="radio">
+            <label><input type="radio" name="q2" value="false">False</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group center-block text-center">
+        <div>
+            <label class="control-label">Question 3: <%= data.survey.questions[2].question %></label>
+        </div>
+      <div>
+        <div class="radio">
+            <label><input type="radio" name="q3" value="true">True</label>
+        </div>
+        <div class="radio">
+            <label><input type="radio" name="q3" value="false">False</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group center-block text-center">
+        <div>
+            <label class="control-label">Question 4: <%= data.survey.questions[3].question %></label>
+        </div>
+      <div>
+        <div class="radio">
+            <label><input type="radio" name="q4" value="true">True</label>
+        </div>
+        <div class="radio">
+            <label><input type="radio" name="q4" value="false">False</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group center-block text-center">
+        <div>
+            <label class="control-label">Question 5: <%= data.survey.questions[4].question %></label>
+        </div>
+      <div>
+        <div class="radio">
+            <label><input type="radio" name="q5" value="true">True</label>
+        </div>
+        <div class="radio">
+            <label><input type="radio" name="q5" value="false">False</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group center-block">        
+      <div>
+        
+            <input type="submit" value="Submit Survey"
+            <% if(new Date(data.survey.ends) < Date.now()) { %> title="Survey has ended" disabled <% } %> />
+
+      </div>
+    </div>
+  </form>
+</div>
+<% include ../partials/footer.ejs %>

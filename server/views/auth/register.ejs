@@ -1,0 +1,43 @@
+<%#
+ * File name: register.ejs
+ * Authors:
+ * Shawn McLaughlin <shawnmcdev@gmail.com>
+ * Joshua Korovesi <joshua.j.korovesi@gmail.com>
+ * Site: https://joshawn-opine.herokuapp.com/
+ * Description: Registration page template.
+%>
+<% include ../partials/header.ejs %>
+
+<!-- Render the Registration form  -->
+	<main class="container">
+		<div class="row">
+            <div class="col-md-offset-4 col-md-4">
+                <h1 class="text-center">Registration</h1>
+                <p class="text-center"> Fill out this short registration form and get polling in no time!</p>
+                <form method="post">
+                    <fieldset class="form-group">
+                        <label for="email">Email: *</label>
+                        <input name="email" type="email" class="form-control" required autofocus />
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <label for="username">Username: *</label>
+                        <input name="username" type="text" class="form-control" required />
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <label for="password">Password: *</label>
+                        <input name="password" type="password" class="form-control" required />
+                    </fieldset>
+                    <fieldset class="form-group text-right">
+                        <input type="submit" class="btn btn-success" value="Submit"/>
+                        <a href="/" class="nopad">
+                            <input type="button" class="btn btn-warning" value="Cancel"/>
+                        </a>
+                    </fieldset>
+                    <p class="notice text-right">By submitting this form, you agree to our <a href="/content/tos.html" target="blank" class="nopad"><strong>Terms of Service</strong></a> and
+                    our <a class="nopad bold" href="/content/privacy.html"><strong>Privacy Policy</strong></a>.
+                </form>
+            </div>
+        </div>
+	</main>
+
+<% include ../partials/footer.ejs %>

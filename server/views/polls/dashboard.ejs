@@ -1,0 +1,31 @@
+<%#
+ * File name: dashboard.ejs
+ * Authors:
+ * Shawn McLaughlin <shawnmcdev@gmail.com>
+ * Joshua Korovesi <joshua.j.korovesi@gmail.com>
+ * Site: https://joshawn-opine.herokuapp.com/
+ * Description: Dashboard page template.
+%>
+<% include ../partials/header.ejs %>
+    <div class="container main-content">
+        <div class="row text-center">
+            <div class="col-md-2"></div>
+            <div class="col-md-3 dashboard-component">
+                <div class="row">
+                    <h3><i class="fa fa-file-text-o" aria-hidden="true"></i> Create Survey </h3>
+                    <div class="row"><a class="light" href="/polls/new/truefalse">True / False</a></div>
+                    <%# <div class="row"><a class="light" href="/polls/new/multiplechoice">Multiple Choice</a></div>%>
+                    <div class="row"><a class="light" href="/polls/new/shortanswers">Short Answers</a></div> 
+                </div>
+            </div>
+            <div class="col-md-2"></div>
+            <div class="col-md-3 dashboard-component">
+                <div class="row">
+                    <h3><i class="fa fa-eye" aria-hidden="true"></i> View Surveys </h3>
+                    <div class="row"><a class="light" href="/polls/mine">View My Polls & Surveys </a></div>
+                    <div class="row"><a class="light" href="/polls/browse">Browse Available Surveys</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <% include ../partials/footer.ejs %>
